@@ -125,7 +125,7 @@ export default {
   },
   methods: {
     getPersonInfo () {
-      axios.get('http://127.0.0.1/list/getPersonInfo', {
+      axios.get('http://localhost/list/getPersonInfo', {
         params: {
           id: this.$route.params.id
         }

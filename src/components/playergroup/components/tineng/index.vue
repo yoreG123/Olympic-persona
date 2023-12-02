@@ -229,7 +229,7 @@ export default {
       const auth = window.sessionStorage.getItem('auth')
       if (auth === '2') {
         const id = this.$route.params.id
-        axios.get('http://127.0.0.1/list/getAthleteId', {
+        axios.get('http://localhost/list/getAthleteId', {
           params: {
             id
           }
@@ -247,12 +247,12 @@ export default {
       }
     },
     getTinengData () {
-      const getBasicTinengData = axios.get('http://127.0.0.1/tineng/getBasicTinengData', {
+      const getBasicTinengData = axios.get('http://localhost/tineng/getBasicTinengData', {
         params: {
           id: this.id
         }
       })
-      const getProTinengData = axios.get('http://127.0.0.1/tineng/getProTinengData', {
+      const getProTinengData = axios.get('http://localhost/tineng/getProTinengData', {
         params: {
           id: this.id
         }

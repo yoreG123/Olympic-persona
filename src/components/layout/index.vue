@@ -2,7 +2,7 @@
   <el-container class="main-container">
     <!-- 头部区域 -->
     <el-header>
-      <span class='name'>运动员画像系统</span>
+      <span class='name'>运动员画像系统(含决策辅助)</span>
       <!-- 右侧的菜单 -->
       <el-menu
         class="el-menu-top"
@@ -76,6 +76,12 @@
             <el-menu-item index="/worldhighlevel">
               <i class="el-icon-trophy"></i>世界高水平
             </el-menu-item>
+            <el-menu-item index="/tiredpredict">
+              <i class="el-icon-s-marketing"></i>疲劳预测
+            </el-menu-item>
+            <el-menu-item index="/markpredict">
+              <i class="el-icon-s-data"></i>成绩预测
+            </el-menu-item>
             <el-submenu index="3">
               <template slot="title">
                 <i class="el-icon-s-custom"></i>个人中心
@@ -125,7 +131,7 @@ export default {
     getPersonaPath () {
       if (!this.showPersona) return
       const athleteId = window.sessionStorage.getItem('id')
-      axios.get('http://127.0.0.1/list/getId', {
+      axios.get('http://localhost/list/getId', {
         params: {
           athleteId
         }

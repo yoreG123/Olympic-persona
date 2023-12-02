@@ -66,7 +66,7 @@ export default {
         if (!valid) {
           return false
         } else {
-          axios.post('http://127.0.0.1/register', {
+          axios.post('http://localhost/register', {
             params: {
               name: this.form.username,
               password: this.form.password

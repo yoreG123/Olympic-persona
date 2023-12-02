@@ -175,7 +175,7 @@ export default {
       this.setWorldHighLevelChart()
     },
     getYear () {
-      axios.get('http://127.0.0.1/cm/getYear').then(res => {
+      axios.get('http://localhost/cm/getYear').then(res => {
         const yearArr = res.data
         this.yearOptions = yearArr.map(item => (
           {
@@ -188,7 +188,7 @@ export default {
       })
     },
     getCompByYear () {
-      axios.get('http://127.0.0.1/cm/getCompByYear', {
+      axios.get('http://localhost/cm/getCompByYear', {
         params: {
           year: this.selectYear
         }
@@ -205,7 +205,7 @@ export default {
       })
     },
     getEventById () {
-      axios.get('http://127.0.0.1/cm/getEventById', {
+      axios.get('http://localhost/cm/getEventById', {
         params: {
           comp: this.selectComp
         }
@@ -222,7 +222,7 @@ export default {
       })
     },
     getResultsByEvent (id, event) {
-      axios.get('http://127.0.0.1/cm/getResultsByEvent', {
+      axios.get('http://localhost/cm/getResultsByEvent', {
         params: {
           id,
           event

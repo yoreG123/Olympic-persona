@@ -59,7 +59,7 @@ export default {
         if (!valid) {
           return false
         } else {
-          axios.post('http://127.0.0.1/login', {
+          axios.post('http://localhost/login', {
             params: {
               name: this.form.username,
               password: this.form.password,

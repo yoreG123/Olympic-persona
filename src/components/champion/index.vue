@@ -238,7 +238,7 @@ export default {
       const auth = window.sessionStorage.getItem('auth')
       if (auth === '2') {
         const id = this.$route.params.id
-        axios.get('http://127.0.0.1/list/getAthleteId', {
+        axios.get('http://localhost/list/getAthleteId', {
           params: {
             id
           }
@@ -256,7 +256,7 @@ export default {
       }
     },
     getPlayerData () {
-      axios.get('http://127.0.0.1/xuanba/getPlayerData', {
+      axios.get('http://localhost/xuanba/getPlayerData', {
         params: {
           id: this.id
         }

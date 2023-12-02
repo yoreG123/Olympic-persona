@@ -537,7 +537,7 @@ export default {
       option && myChart.setOption(option)
     }
     // all () {
-    //   axios.get('http://127.0.0.1/list/all').then(res => {
+    //   axios.get('http://localhost/list/all').then(res => {
     //     // console.log(res.data);
     //     this.info = res.data
     //   }).catch(err => {
@@ -931,7 +931,7 @@ export default {
     //   const testChart = echarts.init(document.getElementById('test_show'))
     //   const xdata = []
     //   const ydata = []
-    //   axios.get('http://127.0.0.1/list/all').then(res => {
+    //   axios.get('http://localhost/list/all').then(res => {
     //     this.info = res.data
     //     // console.log(this.info[0])
     //     for (let i = 0; i < this.info.length; i++) {
@@ -982,7 +982,7 @@ export default {
     // test1ChartFn () {
     //   var ROOT_PATH = 'https://echarts.apache.org/examples'
     //   const test1Chart = echarts.init(document.getElementById('test1_show'))
-    //   axios.get('http://127.0.0.1/list/all').then(res => {
+    //   axios.get('http://localhost/list/all').then(res => {
     //     this.info = res.data
     //     // console.log(this.info[0])
     //     var male = 0
@@ -1183,7 +1183,7 @@ export default {
     // test2ChartFn () {
     //   var test2Chart = echarts.init(document.getElementById('test2_show'))
     //   var QL = 0
-    //   axios.get('http://127.0.0.1/list/all').then(res => {
+    //   axios.get('http://localhost/list/all').then(res => {
     //     this.info = res.data
     //     // console.log(this.info[0])
     //     for (let i = 0; i < this.info.length; i++) {

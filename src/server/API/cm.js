@@ -47,8 +47,10 @@ exports.getEventById = (req, res) => { // 通过id获取赛事项目
 }
 
 exports.getResultsByEvent = (req, res) => { // 通过赛事项目获取成绩
-  var event = req.query.event
-  var id = req.query.id
+  var event = "U23 Men_s Coxed Four"
+  var id = 311
+  // var event = req.query.event
+  // var id = req.query.id
   var sql1 = `SELECT id FROM comp_perf_intl_event WHERE id = ? and event_type = ?`
   db.query(sql1, [id, event], (err, data) => {
     if (err) {

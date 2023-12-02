@@ -51,6 +51,16 @@ const router = new Router({
           path: 'worldhighlevel',
           name: 'worldhighlevel',
           component: () => import('@/components/worldhighlevel')
+        },
+        {
+          path: 'tiredpredict',
+          name: 'tiredpredict',
+          component: () => import('@/components/tiredpredict')
+        },
+        {
+          path: 'markpredict',
+          name: 'markpredict',
+          component: () => import('@/components/markpredict')
         }
       ]
     },

@@ -176,7 +176,7 @@ export default {
   // },
   methods: {
     getPlayerData () {
-      axios.get('http://127.0.0.1/xuanba/getPlayerData', {
+      axios.get('http://localhost/xuanba/getPlayerData', {
         params: {
           id: this.id
         }
