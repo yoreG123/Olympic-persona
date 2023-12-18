@@ -4,7 +4,7 @@
         <div class="markpredict__wrapper">
             <div class="markpredict__model">
                 <div class="markpredict__model-title">成绩预测
-                    
+
                 </div>
                 <div style="text-align: right; margin-bottom: 1%;">
                   今天日期
@@ -147,7 +147,7 @@
                         :total="tableData.length">
                       </el-pagination>
                     </div>
-                    
+
                 </div>
 
             </div>
@@ -164,9 +164,9 @@ export default {
   data () {
     return {
       todaydate: new Date(),
-      tableData:[],
-      pageSize:5,
-      currentPage:1,
+      tableData: [],
+      pageSize: 5,
+      currentPage: 1,
       selectYear: '',
       yearOptions: [],
       selectComp: '',
@@ -213,11 +213,11 @@ export default {
       this.selectEventName = event
       this.getResultsByEvent(id, event)
     },
-    handleSizeChange(val) {
-      this.pageSize = val;
+    handleSizeChange (val) {
+      this.pageSize = val
     },
-    handleCurrentChange(val) {
-      this.currentPage = val;
+    handleCurrentChange (val) {
+      this.currentPage = val
     },
     handleCompare () {
       if (!this.fenduanForm.d500mValue || !this.fenduanForm.d1000mValue || !this.fenduanForm.d1500mValue || !this.fenduanForm.d2000mValue) return
@@ -291,7 +291,6 @@ export default {
           event
         }
       }).then(res => {
-
         const tmp = res.data
         this.country = tmp.map(item => {
           return item.country
@@ -320,16 +319,16 @@ export default {
           })
           this.cNumber = this.country.length
           console.log(this.series)
-          this.setmarkpredictChart("markpredict_show1")
-          this.setmarkpredictChart("markpredict_show2")
-          this.setmarkpredictChart("markpredict_show3")
-          this.setmarkpredictChart("markpredict_show4")
-          this.setmarkpredictChart("markpredict_show5")
-          this.setmarkpredictChart("markpredict_show6")
-          this.setmarkpredictChart("markpredict_show7")
-          this.setmarkpredictChart("markpredict_show8")
-          this.setmarkpredictChart("markpredict_show9")
-          this.setmarkpredictChart("markpredict_show10")
+          this.setmarkpredictChart('markpredict_show1')
+          this.setmarkpredictChart('markpredict_show2')
+          this.setmarkpredictChart('markpredict_show3')
+          this.setmarkpredictChart('markpredict_show4')
+          this.setmarkpredictChart('markpredict_show5')
+          this.setmarkpredictChart('markpredict_show6')
+          this.setmarkpredictChart('markpredict_show7')
+          this.setmarkpredictChart('markpredict_show8')
+          this.setmarkpredictChart('markpredict_show9')
+          this.setmarkpredictChart('markpredict_show10')
         }).catch(err => {
         console.log('获取数据失败' + err)
       })
@@ -339,7 +338,7 @@ export default {
       // var myChart = echarts.init(chartDom)
       // var myChart = echarts.init(document.getElementsByName('markpredict_show'))
       var myChart = echarts.init(document.getElementById(idvar))
-      
+
       var option
 
       option = {
@@ -386,110 +385,110 @@ export default {
           name: '分段',
           type: 'category',
           boundaryGap: false,
-          data: ['2022-10', '2022-11', '2022-12', '2023-01'],
+          data: ['2022-10', '2022-11', '2022-12', '2023-01']
         },
         yAxis: {
           name: '成绩/s',
           type: 'value'
         },
-        series: this.series.slice(0,1)
+        series: this.series.slice(0, 1)
       }
 
       option && myChart.setOption(option)
-      console.log("aaaaaaaaaaaa")
+      console.log('aaaaaaaaaaaa')
     },
-    getMarkPredict(){
+    getMarkPredict () {
       this.tableData = [{
-          project: '世锦赛2023',
-          date: '2016-05-03',
-          id: 'markpredict_show'+1,
-          name: '张三',
-          sex: '男',
-          lastmark: 273,
-          premark: 271,
-          reason: '50米跑成绩增加：7s->6.8s'
-        }, {
-          project: '世锦赛2023',
-          date: '2016-05-02',
-          id: 'markpredict_show'+2,
-          name: '李四',
-          sex: '男',
-          lastmark: 273,
-          premark: 271,
-          reason: '500米测功仪成绩增加：65s->63s'
-        }, {
-          project: '世锦赛2023',
-          date: '2016-05-04',
-          id: 'markpredict_show'+3,
-          name: '王小虎',
-          sex: '男',
-          lastmark: 273,
-          premark: 271,
-          reason: '500米测功仪成绩增加：65s->63s'
-        }, {
-          project: '世锦赛2023',
-          date: '2016-05-01',
-          id: 'markpredict_show'+4,
-          name: '李老六',
-          sex: '男',
-          lastmark: 273,
-          premark: 271,
-          reason: '500米测功仪成绩增加：65s->63s'
-        },{
-          project: '世锦赛2023',
-          date: '2016-05-02',
-          id: 'markpredict_show'+5,
-          name: '李四',
-          sex: '男',
-          lastmark: 273,
-          premark: 271,
-          reason: '500米测功仪成绩增加：65s->63s'
-        }, {
-          project: '世锦赛2023',
-          date: '2016-05-04',
-          id: 'markpredict_show'+6,
-          name: '王小虎',
-          sex: '男',
-          lastmark: 273,
-          premark: 271,
-          reason: '500米测功仪成绩增加：65s->63s'
-        }, {
-          project: '世锦赛2023',
-          date: '2016-05-01',
-          id: 'markpredict_show'+7,
-          name: '李老六',
-          sex: '男',
-          lastmark: 273,
-          premark: 271,
-          reason: '500米测功仪成绩增加：65s->63s'
-        },{
-          project: '世锦赛2023',
-          date: '2016-05-02',
-          id: 'markpredict_show'+8,
-          name: '李四',
-          sex: '男',
-          lastmark: 273,
-          premark: 271,
-          reason: '500米测功仪成绩增加：65s->63s'
-        }, {
-          project: '世锦赛2023',
-          date: '2016-05-04',
-          id: 'markpredict_show'+9,
-          name: '王小虎',
-          sex: '男',
-          lastmark: 273,
-          premark: 271,
-          reason: '500米测功仪成绩增加：65s->63s'
-        }, {
-          project: '世锦赛2023',
-          date: '2016-05-01',
-          id: 'markpredict_show'+10,
-          name: '李老六',
-          sex: '男',
-          lastmark: 273,
-          premark: 271,
-          reason: '500米测功仪成绩增加：65s->63s'
-        }]
+        project: '世锦赛2023',
+        date: '2016-05-03',
+        id: 'markpredict_show' + 1,
+        name: '张三',
+        sex: '男',
+        lastmark: 273,
+        premark: 271,
+        reason: '50米跑成绩增加：7s->6.8s'
+      }, {
+        project: '世锦赛2023',
+        date: '2016-05-02',
+        id: 'markpredict_show' + 2,
+        name: '李四',
+        sex: '男',
+        lastmark: 273,
+        premark: 271,
+        reason: '500米测功仪成绩增加：65s->63s'
+      }, {
+        project: '世锦赛2023',
+        date: '2016-05-04',
+        id: 'markpredict_show' + 3,
+        name: '王小虎',
+        sex: '男',
+        lastmark: 273,
+        premark: 271,
+        reason: '500米测功仪成绩增加：65s->63s'
+      }, {
+        project: '世锦赛2023',
+        date: '2016-05-01',
+        id: 'markpredict_show' + 4,
+        name: '李老六',
+        sex: '男',
+        lastmark: 273,
+        premark: 271,
+        reason: '500米测功仪成绩增加：65s->63s'
+      }, {
+        project: '世锦赛2023',
+        date: '2016-05-02',
+        id: 'markpredict_show' + 5,
+        name: '李四',
+        sex: '男',
+        lastmark: 273,
+        premark: 271,
+        reason: '500米测功仪成绩增加：65s->63s'
+      }, {
+        project: '世锦赛2023',
+        date: '2016-05-04',
+        id: 'markpredict_show' + 6,
+        name: '王小虎',
+        sex: '男',
+        lastmark: 273,
+        premark: 271,
+        reason: '500米测功仪成绩增加：65s->63s'
+      }, {
+        project: '世锦赛2023',
+        date: '2016-05-01',
+        id: 'markpredict_show' + 7,
+        name: '李老六',
+        sex: '男',
+        lastmark: 273,
+        premark: 271,
+        reason: '500米测功仪成绩增加：65s->63s'
+      }, {
+        project: '世锦赛2023',
+        date: '2016-05-02',
+        id: 'markpredict_show' + 8,
+        name: '李四',
+        sex: '男',
+        lastmark: 273,
+        premark: 271,
+        reason: '500米测功仪成绩增加：65s->63s'
+      }, {
+        project: '世锦赛2023',
+        date: '2016-05-04',
+        id: 'markpredict_show' + 9,
+        name: '王小虎',
+        sex: '男',
+        lastmark: 273,
+        premark: 271,
+        reason: '500米测功仪成绩增加：65s->63s'
+      }, {
+        project: '世锦赛2023',
+        date: '2016-05-01',
+        id: 'markpredict_show' + 10,
+        name: '李老六',
+        sex: '男',
+        lastmark: 273,
+        premark: 271,
+        reason: '500米测功仪成绩增加：65s->63s'
+      }]
     }
   }
 }
