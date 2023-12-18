@@ -1,75 +1,53 @@
 <template>
-  <!-- 页面主体区域 -->
-  <!-- <span></span>主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容 -->
   <div>
-    <div class="container-fluid">
-      <!-- <el-row class="curve-pie" :gutter="10">
-        <el-col :sm="16" :xs="16">
-          <div class="gragh_pannel" id="curve_show"></div>
-        </el-col>
-        <el-col :sm="8" :xs="8">
-          <div class="gragh_pannel" id="pie_show"></div>
-        </el-col>
-      </el-row> -->
-      <el-row class="curve-pie" :gutter="10">
-        <el-col :sm="8" :xs="8">
-          <div class="gragh_pannel" id="height_show"></div>
-        </el-col>
-        <el-col :sm="8" :xs="8">
-          <div class="gragh_pannel" id="pie_show" style="display: flex; flex-direction: column; align-items: center; justify-content: center">
-            <h2>总人数：100</h2>
-            <h2>运动员数量：60</h2>
-            <h2>教练员数量：10</h2>
-            <h2>科研人员数量：10</h2>
+    <header>
+      <nav>
+        <el-menu
+          unique-opened
+          router
+          mode="horizontal"
+          text-color="#fff"
+          background-color="#00000033"
+        >
+            <el-menu-item index="/home">首页</el-menu-item>
+            <el-submenu index="1">
+              <template slot="title">运动员信息</template>
+              <el-menu-item index="/label">基础信息</el-menu-item>
+            </el-submenu>
+            <el-submenu index="2">
+              <template slot="title">运动员画像</template>
+              <el-menu-item :index="personaPath">个人画像</el-menu-item>
+            </el-submenu>
+            <el-menu-item :index="championPath">画像模型</el-menu-item>
+            <el-menu-item index="/worldhighlevel">世界高水平</el-menu-item>
+            <el-submenu index="3">
+              <template slot="title">个人中心</template>
+              <el-menu-item>基本资料</el-menu-item>
+              <el-menu-item index="/updatepwd">重置密码</el-menu-item>
+            </el-submenu>
+            <el-menu-item @click="logoutFn">切换账号</el-menu-item>
+        </el-menu>
+      </nav>
+    </header>
+    <div class="carousel__container" v-if="isHomePage">
+      <el-carousel height="100vh" interval="5000">
+        <el-carousel-item v-for="(item, index) in carouselItems" :key="index">
+          <img :src="require(`@/assets/images/${item.src}`)" alt="Slide" />
+          <div class="item__info">
+            <div class="item__info-title">{{item.title}}</div>
+            <div class="item__info-content">{{item.content}}</div>
           </div>
-        </el-col>
-        <el-col :sm="8" :xs="8">
-          <div class="gragh_pannel" id="jingji_show"></div>
-        </el-col>
-      </el-row>
+        </el-carousel-item>
+      </el-carousel>
     </div>
-
-    <div class="container-fluid">
-      <el-row class="curve-pie" :gutter="10">
-        <el-col :sm="8" :xs="8">
-          <div class="gragh_pannel" id="gender_show"></div>
-        </el-col>
-        <el-col :sm="8" :xs="8">
-          <div class="gragh_pannel" id="map_show"></div>
-        </el-col>
-        <el-col :sm="8" :xs="8">
-          <div class="gragh_pannel" id="pie_show" style="display: flex; flex-direction: column; align-items: center">
-            <div style="font-size: 20px; font-weight: 700; text-align:center; margin-top: 10px; margin-bottom: 10px">运动员伤病情况统计表</div>
-            <el-table
-              :data="tableData"
-              border
-              style="width: 90%">
-              <el-table-column
-                prop="name"
-                label="姓名"
-              >
-              </el-table-column>
-              <el-table-column
-                prop="shangbing"
-                label="伤病部位"
-              >
-              </el-table-column>
-              <el-table-column
-                prop="date"
-                label="受伤时间">
-              </el-table-column>
-            </el-table>
-          </div>
-        </el-col>
-      </el-row>
+    <div v-else class="router__container">
+      <router-view></router-view>
     </div>
   </div>
 </template>
 
 <script>
-// import axios from 'axios'
-import * as echarts from 'echarts'
-import 'echarts/extension/bmap/bmap'
+import myAxios from '@/utils/request'
 export default {
   data () {
     return {
@@ -1259,108 +1237,106 @@ export default {
 }
 </script>
 
-<style lang='less' scoped>
-.main-container {
-  height: 100%;
-  .el-header,
-  .el-aside {
-    background-color: #23262e;
-  }
-  .el-header {
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    .name {
-    padding-left: 15px;
-    color: white;
-    font-size: 24px;
-    font-weight: 900;
-    line-height: 60px;
-  }
-  }
-  .el-main {
-    overflow-y: scroll;
-    height: 0;
-    background-color: #f2f2f2;
-  }
-  .el-footer {
-    background-color: #eee;
-    font-size: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+<style lang="less" scoped>
+/* 添加样式以美化你的页面 */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-// 左侧边栏用户信息区域
-.user-box {
-  height: 70px;
+header {
+  width: 100%;
+  background-color: rgba(51, 51, 51, 0.3);
+  padding: 10px;
+  color: white;
+  text-align: center;
+  position: fixed;
+  z-index: 5;
+}
+
+nav {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
-  background-color: #23262e;
-  user-select: none;
-//   img {
-//     width: 35px;
-//     height: 35px;
-//     border-radius: 50%;
-//     background-color: #fff;
-//     margin-right: 15px;
-//     object-fit: cover;
-//   }
-  span {
+  justify-content: space-around;
+  width: 50%;
+  position: relative;
+  left: 50%;
+}
+.carousel__container {
+  position: relative;
+  overflow: hidden;
+}
+.carousel__container img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/deep/ .el-carousel__item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(270deg,transparent,#001d3e 90%);
+  z-index: 3;
+}
+
+.item {
+  &__info {
+    position: absolute;
+    z-index: 5;
+    width: 50%;
+    height: 20%;
+    left: 10%;
+    top: 40%;
     color: white;
-    font-size: 12px;
+    &-title {
+      font-family: "Effra",Arial,sans-serif;
+      font-weight: 900;
+      font-style: italic;
+      font-size: 35px;
+      line-height: 40px;
+      margin-bottom: 20px;
+    }
+    &-content {
+      font-family: "Effra","Helvetica Neue",Arial,sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+    }
   }
 }
-.container-fluid {
-    padding: 10px;
-}
-// 侧边栏菜单的样式
-.el-aside {
-  .el-submenu,
-  .el-menu-item {
-    width: 200px;
-    user-select: none;
-  }
+
+/deep/ .el-menu {
+  background: rgba(51, 51, 51, 0) !important;
+  border-bottom: 0px;
 }
 
-.gragh_pannel {
-  height: 350px;
-  border: 1px solid #e7e7e9;
-  background-color: #fff !important;
-  // margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+.el-menu-item,
+/deep/ .el-submenu__title {
+  background-color: rgba(51, 51, 51, 0) !important;
+  font-weight: 700 !important;
 }
-
-.column_pannel {
-  margin-bottom: 20px;
-  height: 400px;
-  border: 1px solid #e7e7e9;
-  background-color: #fff !important;
+.el-menu-item:hover,
+/deep/ .el-submenu__title:hover {
+  background-color: rgba(144, 144, 144, 0.5) !important;
+  border-radius: 8px;
 }
-
-.map_pannel {
-  height: 700px;
-  border: 1px solid #e7e7e9;
-  background-color: #fff !important;
-  margin-bottom: 20px;
+.el-menu--horizontal .el-menu-item:not(.is-disabled):focus,
+/deep/ .el-submenu__title:focus {
+  color: white;
 }
-
-.pannel_test {
-  margin-bottom: 20px;
-  height: 400px;
-  border: 1px solid #e7e7e9;
-  background-color: #fff !important;
+.el-menu--horizontal>.el-menu-item.is-active,
+.el-menu--horizontal .el-menu .el-menu-item.is-active,
+/deep/ .el-menu--horizontal>.el-submenu.is-active .el-submenu__title {
+  color: white;
+  border: 0px;
 }
-
-.pannel_test1 {
-  margin-bottom: 20px;
-  height: 700px;
-  border: 1px solid #e7e7e9;
-  background-color: #fff !important;
+.router__container {
+  width: 100%;
 }
 </style>
